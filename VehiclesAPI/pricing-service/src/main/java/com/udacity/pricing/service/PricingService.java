@@ -15,10 +15,10 @@ import java.util.stream.LongStream;
 /**
  * Implements the pricing service to get prices for each vehicle.
  */
-public class PricingService implements PriceServices{
+public class PricingService{
 
-    @Autowired
-    PriceRepository priceRepository;
+//    @Autowired
+//    PriceRepository priceRepository;
 
     /**
      * Holds {ID: Price} pairings (current implementation allows for 20 vehicles)
@@ -52,7 +52,7 @@ public class PricingService implements PriceServices{
                 .multiply(new BigDecimal(5000d)).setScale(2, RoundingMode.HALF_UP);
     }
 
-    public List<Price> getAllPrices() {
-        return (List<Price>) priceRepository.findAll();
-    }
+//    public List<Price> getAllPrices() {
+//        return (List<Price>) priceRepository.findAll();
+//    }
 }
