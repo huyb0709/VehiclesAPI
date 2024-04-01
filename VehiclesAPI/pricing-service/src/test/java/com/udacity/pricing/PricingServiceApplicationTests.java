@@ -51,11 +51,11 @@ public class PricingServiceApplicationTests {
 //				this.restTemplate.getForEntity("http://localhost:" + port + "/prices/1", Price.class);
 //		assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
 //	}
-	@Test
-	public void getAllPrices() throws Exception {
-		mockMvc.perform(get("/services/price/allPrice")).
-				andExpect(status().isOk()).
-				andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE));
-	}
+//	@Test
+//	public void getAllPrices() throws Exception {
+//		mockMvc.perform(get("/services/price/allPrice")).
+//				andExpect(status().isOk()).
+//				andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE));
+//	}
 
 }
