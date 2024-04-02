@@ -137,6 +137,18 @@ public class CarControllerTest {
                 .andExpect(status().isNoContent());
     }
 
+    @Test
+    public void updateCar() throws Exception {
+        //fix comment reviewer
+        Car car = getCar();
+        mvc.perform(put(new URI("/cars/1"))
+                        .content(json.write(car).getJson())
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
+                        .accept(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(status().isOk());
+
+    }
+
     /**
      * Creates an example Car object for use in testing.
      * @return an example Car object
